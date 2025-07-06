@@ -1,1 +1,83 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieRoulette</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MovieRoulette</h1>
+        <p>Discover your next favorite movie!</p>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="">Any Genre</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>Release Year:</label>
+                <div class="range-selector">
+                    <select id="year-from">
+                        <option value="">From</option>
+                    </select>
+                    <span>-</span>
+                    <select id="year-to">
+                        <option value="">To</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <label>Rating:</label>
+                <div class="rating-range">
+                    <div class="star-rating" id="rating-from">
+                        <i class="far fa-star" data-value="1"></i>
+                        <i class="far fa-star" data-value="2"></i>
+                        <i class="far fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                    <span>-</span>
+                    <div class="star-rating" id="rating-to">
+                        <i class="far fa-star" data-value="1"></i>
+                        <i class="far fa-star" data-value="2"></i>
+                        <i class="far fa-star" data-value="3"></i>
+                        <i class="far fa-star" data-value="4"></i>
+                        <i class="far fa-star" data-value="5"></i>
+                    </div>
+                </div>
+                <div class="rating-display" id="rating-display">0-0</div>
+            </div>
+            
+            <button id="search-btn">Search Movie</button>
+            <button id="feeling-lucky">I'm Feeling Lucky</button>
+        </div>
+        
+        <div class="result-container">
+            <div id="spinner" class="hidden">
+                <div id="spinner-text"></div>
+            </div>
+            <div id="movie-result" class="hidden">
+                <h2 id="movie-title"></h2>
+                <div class="movie-details">
+                    <img id="movie-poster" src="" alt="Movie Poster">
+                    <div class="movie-info">
+                        <p><strong>Release Date:</strong> <span id="movie-release-date"></span></p>
+                        <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
+                        <p id="movie-overview"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="error-message" class="hidden"></div>
+        </div>
+    </div>
+    
+    <script src="/static/script.js"></script>
+</body>
+</html>
