@@ -25,7 +25,6 @@
 ---
 
 ## Project Structure
-
 MovieRoulette/
 │
 ├── app.py # Flask backend logic
@@ -39,7 +38,6 @@ MovieRoulette/
 │ ├── script.js # JavaScript for interactivity
 │ ├── style.css # Custom styling
 │ └── spinner.gif # Loading animation
-
 
 
 ## Setup Instructions
