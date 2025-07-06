@@ -262,4 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.getElementById('movie-release-date').textContent = movie.release_date || 'Unknown';
         document.getElementById('movie-rating').textContent = movie.vote_average ? `${movie.vote_average}/10` : 'Not rated';
-        document.getElementById('movie-overview').textContent = movie.overview || 'No overview a
+        document.getElementById('movie-overview').textContent = movie.overview || 'No overview available.';
+        
+        movieResult.classList.remove('hidden');
+    }
+});

@@ -6,11 +6,14 @@
     <title>MovieRoulette</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>MovieRoulette</h1>
-        <p>Discover your next favorite movie!</p>
+        <header>
+            <h1>MovieRoulette</h1>
+            <p class="subtitle">Pick your Preferences (unless you're feeling lucky!) and search for your movie.</p>
+        </header>
         
         <div class="filters">
             <div class="filter-group">
@@ -55,13 +58,20 @@
                 <div class="rating-display" id="rating-display">0-0</div>
             </div>
             
-            <button id="search-btn">Search Movie</button>
-            <button id="feeling-lucky">I'm Feeling Lucky</button>
+            <div class="buttons">
+                <button id="search-btn">
+                    <i class="fas fa-search"></i> Find My Movie
+                </button>
+                <button id="feeling-lucky">
+                    <i class="fas fa-dice"></i> I'm Feeling Lucky
+                </button>
+            </div>
         </div>
         
         <div class="result-container">
             <div id="spinner" class="hidden">
                 <div id="spinner-text"></div>
+                <p>Finding your perfect movie...</p>
             </div>
             <div id="movie-result" class="hidden">
                 <h2 id="movie-title"></h2>
