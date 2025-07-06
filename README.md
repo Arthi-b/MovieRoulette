@@ -40,46 +40,33 @@ MovieRoulette/
 │ ├── style.css # Custom styling
 │ └── spinner.gif # Loading animation
 
-yaml
-Copy
-Edit
 
----
 
 ## Setup Instructions
 
 1. **Clone the repository**
-   ```bash
+   ```
    git clone https://github.com/yourusername/MovieRoulette.git
    cd MovieRoulette
-Create and activate a virtual environment
-
-bash
-Copy
-Edit
+   ```
+Create and activate a virtual environment:
+```
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate # On Windows: venv\Scripts\activate
+```
 Install dependencies
-
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
-Set up TMDB API
-
+```
+Set up TMDB API: 
 Create an account and get your API key from https://www.themoviedb.org/
 
 Create a .env file in the project root and add:
-
-ini
-Copy
-Edit
+```
 TMDB_API_KEY=your_tmdb_api_key_here
-Run the app
-
-bash
-Copy
-Edit
+```
+Run the app:
+```
 python app.py
 Then open your browser to http://127.0.0.1:5000
-
+```
